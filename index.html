@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+<body class="bg-[url('/images/bg-intro-mobile.png')] md:bg-[url('/images/bg-intro-desktop.png')] bg-[--red]">
+  <main class="container mx-auto flex flex-col md:flex-row justify-center items-center h-screen gap-0 md:gap-10">
+    <header class="w-10/12 md:w-1/2 flex flex-col text-center mt-24 md:mt-0 md:text-left pt-5 md:pt-0">
+      <div>
+        <h1 class="text-[--white] text-3xl mb-6 font-[700] md:text-[3.5em] md:leading-tight">Learn to code by watching
+          others</h1>
+        <p class="text-[--white]">See how experienced developers solve problems in real-time. Watching scripted
+          tutorials
+          is great,
+          but understanding how developers think is invaluable.</p>
+      </div>
+    </header>
+    <section class="w-10/12 md:w-1/2 flex flex-col text-center mt-16 mb-2 md:mt-0 md:mb-0">
+      <div class="bg-[--blue] mb-6 py-3 px-10 text-[--white] rounded-lg shadow-[0px_8px_1px_0px_rgba(0,0,0,0.2)]">
+        <p class="flex flex-col justify-center items-center font-[400] h-16 md:flex-row md:h-8"><strong
+            class="font-[600]">Try it free 7 days </strong>
+          &nbsp;then $20/mo.
+          thereafter
+        </p>
+      </div>
+      <div class="bg-[--white] rounded-lg shadow-[0px_8px_1px_0px_rgba(0,0,0,0.2)]">
+        <form class="form flex flex-col justify-center items-center gap-2 py-4 md:py-10">
+          <input type="text" id="fname" name="fname" placeholder="First Name"
+            class="w-11/12 border rounded-md h-12 p-4 font-[600] text-sm text-[--dark-blue]">
+          <em id="fnameError" class="hidden error text-[--red] text-[12px] font-[500] w-11/12 md:text-right mb-4">First
+            Name
+            cannot be
+            empty or
+            contain numbers and special
+            characters!</em>
+          <input type="text" id="lname" name="lname" placeholder="Last Name"
+            class="w-11/12 border rounded-md h-12 p-4 font-[600] text-sm text-[--dark-blue]">
+          <em id="lnameError" class="hidden error text-[--red] text-[12px] font-[500] w-11/12 md:text-right mb-4">Last
+            Name
+            cannot
+            be empty or
+            contain numbers and special
+            characters!</em>
+          <input type="email" id="email" name="email" placeholder="Email Address"
+            class="w-11/12 border rounded-md h-12 p-4 font-[600] text-sm text-[--dark-blue]">
+          <em id="emailError" class="hidden error text-[--red] text-[12px] font-[500] w-11/12 md:text-right mb-4">Email
+            cannot
+            be
+            empty and must be
+            valid!</em>
+          <input type="password" id="password" name="password" placeholder="Password"
+            class="w-11/12 border rounded-md h-12 p-4 font-[600] text-sm text-[--dark-blue]">
+          <em id="passwordError"
+            class="hidden error text-[--red] text-[12px] font-[500] w-11/12 md:text-right mb-2">Password
+            cannot be empty or less
+            than 8
+            characters!</em>
+        </form>
+        <button id="submitButton"
+          class="bg-[--green] text-[--white] w-11/12 h-12 font-[500] rounded-md mb-2 shadow-[0px_3px_1px_0px_rgba(0,0,0,0.5)] shadow-[--green-shadow]">CLAIM
+          YOUR
+          FREE
+          TRIAL</button>
+        <div class="mb-4">
+          <p class="text-[--grayish-blue] text-xs font-[400] leading-loose">By clicking the button, you are agreeing to
+            our <a href="" class="text-[--red] font-[600]">Terms and
+              Services</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script defer src="script.js"></script>
 </body>
+
 </html>

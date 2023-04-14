@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue: hsl(248, 32%, 49%);
+    --white: #ffffff;
+    --red: hsl(0, 100%, 74%);
+    --red-shadow: hsl(0, 57%, 45%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --green: hsl(154, 59%, 51%);
+    --green-shadow: hsl(154, 57%, 43%);
+}
+
+#submitButton:hover {
+    background-color: hsl(154, 83%, 61%);
+    ;
+}
+
+#submitButton:disabled {
+    background-color: hsl(0, 100%, 74%);
+    ;
+}
